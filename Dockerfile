@@ -10,7 +10,7 @@ ONBUILD RUN pip install --no-cache-dir -r requirements.txt
 
 ONBUILD COPY . /usr/src/app
 #Adding permission to access .shipped folder
-RUN chmod a+x __init__.py exceptions.py gmail.py mailbox.py message.py utf.py utils.py
+RUN chmod a+x ./__init__.py ./exceptions.py ./gmail.py ./mailbox.py ./message.py ./utf.py ./utils.py
 #provide your build/run commands
-RUN ["__init__.py"]
-CMD __init__.py
+RUN ["./__init__.py"]
+CMD ./__init__.py
